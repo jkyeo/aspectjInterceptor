@@ -11,7 +11,6 @@ import org.aspectj.lang.annotation.Pointcut;
 
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
 import rx_activity_result2.Result;
 import rx_activity_result2.RxActivityResult;
 
