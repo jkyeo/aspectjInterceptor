@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -16,8 +17,8 @@ public class MainActivity extends Activity {
         findViewById(R.id.demoButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                demoTest("hello, aspectj.");
-                new DemoModel().demoTest(MainActivity.this, "hello, aspectj in model.");
+                demoTest("hello, aspectj.");
+//                new DemoModel().demoTest(MainActivity.this, "hello, aspectj in model.");
             }
         });
     }
@@ -25,5 +26,6 @@ public class MainActivity extends Activity {
     @NeedLogin(retry = true)
     private void demoTest(String msg) {
         Log.i("aspectj", "==== Action that needs login has been executed. MSG = " + msg);
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }
